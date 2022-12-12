@@ -39,10 +39,10 @@ def part2():
     register_x = 1
     ip_lock = False
 
-    for cycle in range(1, 241):
-        screen_normalised_horizontal = (cycle-1) % 40
+    for cycle in range(0, 240):
+        screen_normalised_horizontal = (cycle) % 40
         if screen_normalised_horizontal >= register_x - 1 and screen_normalised_horizontal <= register_x + 1:
-            screen[(cycle-1) // 40][(cycle-1) % 40] = '#'
+            screen[(cycle) // 40][(cycle) % 40] = '#'
 
         if ip_lock == False:
             try:
